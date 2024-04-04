@@ -1,4 +1,5 @@
 import './App.css'
+import {useState} from 'react';
 import Header from './Components/Header';
 import { Components } from './Components/CoreComponents';
 import {Data_Components} from './Components/data';
@@ -6,10 +7,9 @@ import TabButton from './Components/TabButton';
 
 
 function App() {
-
+  const [ current , update ] = useState('Please enter button');
   function handleEvent(SelectedValue){
-    console.log(SelectedValue);
-
+    update(SelectedValue)
   }
   return (
     <div>
@@ -39,7 +39,7 @@ function App() {
         </menu>
         <div>
           <p>
-          
+            {current}
           </p>
         </div>
       </section>
