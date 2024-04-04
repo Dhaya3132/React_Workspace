@@ -2,15 +2,19 @@ import './App.css'
 import {useState} from 'react';
 import Header from './Components/Header';
 import { Components } from './Components/CoreComponents';
-import {Data_Components} from './Components/data';
+import {Data_Components, EXAMPLES} from './Components/data';
 import TabButton from './Components/TabButton';
 
 
+
 function App() {
-  const [ current , update ] = useState('Please enter button');
-  function handleEvent(SelectedValue){
-    update(SelectedValue)
+
+  const [ SelectedContent , SetSelectedContent ] = useState();
+
+  function handleEvent(selectedvalue){
+    SetSelectedContent(selectedvalue);
   }
+
   return (
     <div>
       <Header></Header>
@@ -32,18 +36,24 @@ function App() {
       <section id="examples">
         <h2>Example</h2>
         <menu>
-          <TabButton  label="children" OnSelect={()=> handleEvent('Component')}/>
-          <TabButton  label="JSX" OnSelect={()=> handleEvent('JSX')}/> 
-          <TabButton  label="Element" OnSelect={()=> handleEvent('Element')}/> 
-          <TabButton  label="Vite JS" OnSelect={()=> handleEvent('Vite')}/>
+          <TabButton  label="Components" OnSelect={()=> handleEvent('components')}/>
+          <TabButton  label="JSX" OnSelect={()=> handleEvent('jsx')} /> 
+          <TabButton  label="props" OnSelect={()=> handleEvent('props')}/> 
+          <TabButton  label="state" OnSelect={()=> handleEvent('state')}/>
         </menu>
-        <div>
-          <p>
-            {current}
-          </p>
+      <div id='content'>
+            {!SelectedContent ? <p>Plase click a button</p> :  
+
+            <><h2>{EXAMPLES[SelectedContent].title}</h2>
+            <p>{EXAMPLES[SelectedContent].description}</p><pre>
+              <code>
+                {EXAMPLES[SelectedContent].code}
+              </code>
+            </pre></> 
+
+            }
         </div>
       </section>
-
     </div>
   );
 }
