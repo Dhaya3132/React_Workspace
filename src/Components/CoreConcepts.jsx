@@ -1,4 +1,4 @@
-import { Data_Components} from './Data';
+import { Data_Components} from '../Components/DataComponents/Data';
 import { Components } from './CoreComponents';
 
 export default function CoreConcepts(){
