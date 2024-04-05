@@ -1,5 +1,6 @@
-const description = ['Crucial', 'Core', 'Fundamentals'];
 import reactvite from '../assets/react.svg';
+
+const description = ['Crucial', 'Core', 'Fundamentals'];
 
 function genrandom(max) {
   return Math.floor(Math.random() * max);

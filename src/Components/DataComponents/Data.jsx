@@ -1,4 +1,4 @@
-import reactimage from '../assets/react.svg';
+import reactimage from '../../assets/react.svg';
 
 export const Data_Components = [
     {

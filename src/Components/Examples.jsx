@@ -30,10 +30,10 @@ export default function Examples(){
       <section id="examples">
       <h2>Example</h2>
       <menu>
-        <TabButton label="Components" OnSelect={() => handleEvent('components')} />
-        <TabButton label="JSX" OnSelect={() => handleEvent('jsx')} />
-        <TabButton label="props" OnSelect={() => handleEvent('props')} />
-        <TabButton label="state" OnSelect={() => handleEvent('state')} />
+        <TabButton label="Components" isSelected={SelectedContent === 'components'} OnSelect={() => handleEvent('components')} />
+        <TabButton label="JSX" isSelected={SelectedContent === 'jsx'}  OnSelect={() => handleEvent('jsx')} />
+        <TabButton label="props" isSelected={SelectedContent === 'props'} OnSelect={() => handleEvent('props')} />
+        <TabButton label="state" isSelected={SelectedContent === 'state'} OnSelect={() => handleEvent('state')} />
       </menu>
       {tabcontent}
       </section>

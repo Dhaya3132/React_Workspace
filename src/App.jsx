@@ -11,9 +11,10 @@ function App() {
   return (
   <>
     <Header></Header>
-    <CoreConcepts></CoreConcepts>
-    <Examples></Examples>
-    
+    <main>
+      <CoreConcepts></CoreConcepts>
+      <Examples></Examples>
+    </main>    
   </>
 );
 }
