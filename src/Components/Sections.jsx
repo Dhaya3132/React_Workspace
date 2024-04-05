@@ -1,6 +1,6 @@
-export function Sections({title, children, id}){
+export function Sections({title, children, ...props}){
     return(
-        <section id={id}>
+        <section {...props}>
           <h2>{title}</h2>
           {children}
         </section>
