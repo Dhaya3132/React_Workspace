@@ -1,4 +1,4 @@
-export default function TabButtton({label , OnSelect}) {
+export default function TabButton({label , OnSelect}) {
 
     return (
         <li>

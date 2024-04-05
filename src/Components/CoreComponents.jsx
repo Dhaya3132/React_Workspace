@@ -1,4 +1,3 @@
-
 export function Components({image, Title, Description}) {
     return (
       <li>
