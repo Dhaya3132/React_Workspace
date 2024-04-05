@@ -20,19 +20,19 @@ function App() {
   if (SelectedContent) {
     tabcontent = 
     <div id='content'>
-        <><h2>{EXAMPLES[SelectedContent].title}</h2>
+      <h2>{EXAMPLES[SelectedContent].title}</h2>
           <p>{EXAMPLES[SelectedContent].description}</p><pre>
             <code>
               {EXAMPLES[SelectedContent].code}
             </code>
-          </pre></>
+          </pre>
     </div>
   }
 
 
   return (
-    <div>
-      <Header></Header>
+  <>
+    <Header></Header>
       <section>
         <ul className='core-conscept'>
           {Data_Components.map(items => 
@@ -55,7 +55,7 @@ function App() {
         </menu>
         {tabcontent}
       </section>
-    </div>
+    </>
   );
 }
 
